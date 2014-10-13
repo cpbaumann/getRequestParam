@@ -1,7 +1,5 @@
 # getRequestParam
 
-A study on a Performance optimized Gallery 
-
 ## DESCRIPTION
 
 This Snippet returns sanitized GET and POST request parameter,
