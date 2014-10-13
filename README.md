@@ -1,4 +1,4 @@
-# getRequestParam
+# MODX Snippet getRequestParam
 
 ## DESCRIPTION
 
