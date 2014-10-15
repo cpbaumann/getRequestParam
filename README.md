@@ -10,14 +10,23 @@ This Snippet returns sanitized GET and POST request parameter,
 * &name string required
 	the request key is required
 
-* &type string required Default: `GET`
+* &type string required Default: 'GET'
 	POST or GET
 
 * &allowedValues array optional. 
-	checks array of allowed input values,  returns a fallback value when it fails
+	checks array of allowed input values, 
+  returns a fallback value when it fails
 
 * &allowedTypes string optional. 
- 	checks input natural numbers (1,2,3 no zero), returns a fallback value when it fails   
+ 	checks input natural numbers (1,2,3 no zero), 
+  returns a fallback value when it fails   
+
+* &default string optional. Default: '' 
+  returns default if request is not set or empty.
+
+* &fallbackvalue string optional. Default: '' 
+  returns fallbackvalue if request value validation fails
+
 
 
 ## USAGE:
