@@ -68,7 +68,7 @@ if ('POST' === $type) {
         }
 
         if ('naturalNumbers' === $allowedTypes) {
-            if(!preg_match("/^[1-9]{1}[0-9]{0,}$/", $_POST[$name])){
+            if(!preg_match("/^[1-9]{1}[0-9]{0,}$/", $_POST[$name])) {
                 return $fallbackvalue;
             }
         }
@@ -91,7 +91,7 @@ if ('GET' === $type) {
         }
 
         if ('naturalNumbers' === $allowedTypes) {
-            if(!preg_match("/^[1-9]{1}[0-9]{0,}$/", $_GET[$name])){
+            if(!preg_match("/^[1-9]{1}[0-9]{0,}$/", $_GET[$name])) {
                 return $fallbackvalue;
             }
         }
