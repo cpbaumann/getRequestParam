@@ -39,11 +39,11 @@
  */
 
 $name = $modx->getOption('name', $scriptProperties);
-$type = $modx->getOption('type', $scriptProperties,'GET');
-$allowedValues = $modx->getOption('allowedValues', $scriptProperties,false);
+$type = $modx->getOption('type', $scriptProperties, 'GET');
+$allowedValues = $modx->getOption('allowedValues', $scriptProperties, false);
 $allowedTypes = $modx->getOption('allowedTypes', $scriptProperties); 
-$default = $modx->getOption('default', $scriptProperties,'');
-$fallbackvalue = $modx->getOption('fallbackvalue', $scriptProperties,'');
+$default = $modx->getOption('default', $scriptProperties, '');
+$fallbackvalue = $modx->getOption('fallbackvalue', $scriptProperties, '');
 
 $modx->log(modX::LOG_LEVEL_DEBUG , '[getRequestParam] called on page ' 
     . $modx->resource->id 
@@ -61,7 +61,7 @@ if ('POST' === $type) {
     if (isset($_POST[$name]) AND (!empty($_POST[$name]))) {
 
         if (true == $allowedValues) {
-            $allowedValues = split(',',$allowedValues);
+            $allowedValues = split(',', $allowedValues);
             if (!in_array($_POST[$name], $allowedValues)) {
                 return $fallbackvalue;
             }
@@ -84,7 +84,7 @@ if ('GET' === $type) {
     if (isset($_GET[$name]) AND (!empty($_GET[$name]))) {
 
         if (true == $allowedValues) {
-            $allowedValues = split(',',$allowedValues);            
+            $allowedValues = split(',', $allowedValues);            
             if (!in_array($_GET[$name], $allowedValues)) {
                 return $fallbackvalue;
             }
