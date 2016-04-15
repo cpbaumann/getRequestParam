@@ -45,7 +45,7 @@ $allowedTypes = $modx->getOption('allowedTypes', $scriptProperties);
 $default = $modx->getOption('default', $scriptProperties, '');
 $fallbackvalue = $modx->getOption('fallbackvalue', $scriptProperties, '');
 
-$modx->log(modX::LOG_LEVEL_DEBUG , '[getRequestParam] called on page ' 
+$modx->log(modX::LOG_LEVEL_DEBUG, '[getRequestParam] called on page ' 
     . $modx->resource->id 
     . ' with the following properties: '
     . print_r($scriptProperties, true));
